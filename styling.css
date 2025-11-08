@@ -1,0 +1,66 @@
+/* styling.css */
+#saveButton {
+    -fx-background-color: #90EE90;
+    -fx-cursor: hand;
+}
+
+#saveButton:hover {
+    -fx-background-color: #76D77A;
+}
+
+#showButton {
+    -fx-background-color: #90CAF9;
+    -fx-cursor: hand;
+}
+
+#showButton:hover {
+    -fx-background-color: #64B5F6;
+}
+
+#exitButton {
+    -fx-background-color: #F08080;
+    -fx-cursor: hand;
+}
+
+#exitButton:hover {
+    -fx-background-color: #ef5350;
+}
+#mainMenuButton {
+    -fx-background-color: #A983DF; 
+    -fx-cursor: hand;
+}
+
+#mainMenuButton:hover {
+    -fx-background-color: #C6AFFF;
+}
+
+.dialog-pane .button-bar {
+    -fx-background-color: white;
+    -fx-spacing: 15.0px;           
+    -fx-padding: 10.0 60.0 10.0 20.0;   
+}
+
+.scroll-pane {
+    -fx-background: #FFFDE0; 
+}
+
+.dialog-pane {
+    -fx-background-color: #E8F5E9;
+}
+
+.combo-box-popup .list-view .list-cell:filled:selected,
+.combo-box-popup .list-view .list-cell:filled:selected:hover {
+  -fx-background-color: #9932CC;
+}
+
+.combo-box-popup .list-view .list-cell:hover {
+  -fx-background-color: #9932CC;
+}
+
+
+
+
+
+
+
+

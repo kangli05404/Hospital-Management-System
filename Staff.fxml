@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1">
+
+	<top>
+		<HBox alignment="CENTER">
+			<padding>
+				<Insets top="30" />
+			</padding>
+			<Label text="Staff" style="-fx-font-size: 30px; -fx-font-weight: bold;" />
+		</HBox>
+	</top>
+
+	<center>
+		<VBox alignment="TOP_CENTER" spacing="14" style="-fx-padding: 20;">
+			<GridPane hgap="12" vgap="12" alignment="CENTER">
+				<columnConstraints>
+					<ColumnConstraints halignment="LEFT" />
+					<ColumnConstraints hgrow="NEVER" />
+				</columnConstraints>
+
+				<Label text="ID:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+				<TextField fx:id="staffIdField" GridPane.rowIndex="0"
+					GridPane.columnIndex="1" promptText="e.g. S123" minWidth="200"
+					prefWidth="200" maxWidth="200" />
+
+				<Label text="Name:" GridPane.rowIndex="1"
+					GridPane.columnIndex="0" />
+				<TextField fx:id="staffNameField" GridPane.rowIndex="1"
+					GridPane.columnIndex="1" minWidth="200" prefWidth="200" maxWidth="200" />
+
+				<Label text="Sex:" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+				<TextField fx:id="staffSexField" GridPane.rowIndex="2"
+					GridPane.columnIndex="1" promptText="M / F" minWidth="200"
+					prefWidth="200" maxWidth="200" />
+
+				<Label text="Salary:" GridPane.rowIndex="3"
+					GridPane.columnIndex="0" />
+				<TextField fx:id="salaryField" GridPane.rowIndex="3"
+					GridPane.columnIndex="1" promptText="e.g. 4800" minWidth="200"
+					prefWidth="200" maxWidth="200" />
+
+				<!-- Designation -->
+				<Label text="Designation:" GridPane.rowIndex="4"
+					GridPane.columnIndex="0" />
+				<ComboBox fx:id="designationComboBox" GridPane.rowIndex="4"
+					GridPane.columnIndex="1" promptText="Select designation" onAction="#onDesignationChanged"
+					minWidth="200" prefWidth="200" maxWidth="200" />
+
+				<!-- Nurse (Shift) -->
+				<Label text="Shift:" fx:id="shiftLabel" GridPane.rowIndex="5"
+					GridPane.columnIndex="0" visible="false" managed="false" />
+				<ComboBox fx:id="shiftComboBox" GridPane.rowIndex="5"
+					GridPane.columnIndex="1" promptText="Select shift" minWidth="200"
+					prefWidth="200" maxWidth="200" visible="false" managed="false" />
+
+				<!-- Cleaner (Floor) -->
+				<Label text="Floor:" fx:id="floorLabel" GridPane.rowIndex="5"
+					GridPane.columnIndex="0" visible="false" managed="false" />
+				<TextField fx:id="floorField" GridPane.rowIndex="5"
+					GridPane.columnIndex="1" promptText="e.g. 3rd Floor" visible="false"
+					managed="false" minWidth="200" prefWidth="200" maxWidth="200" />
+
+				<!-- Lab Technician (Experience) -->
+				<Label text="Experience(Year):" fx:id="experienceLabel"
+					GridPane.rowIndex="5" GridPane.columnIndex="0" visible="false"
+					managed="false" />
+				<TextField fx:id="experienceField" GridPane.rowIndex="5"
+					GridPane.columnIndex="1" visible="false" managed="false" minWidth="200"
+					prefWidth="200" maxWidth="200" />
+
+				<!-- Security (Location) -->
+				<Label text="Post Location:" fx:id="locationLabel"
+					GridPane.rowIndex="5" GridPane.columnIndex="0" visible="false"
+					managed="false" />
+				<TextField fx:id="locationField" GridPane.rowIndex="5"
+					GridPane.columnIndex="1" promptText="Main Gate" visible="false"
+					managed="false" minWidth="200" prefWidth="200" maxWidth="200" />
+			</GridPane>
+		</VBox>
+	</center>
+
+	<bottom>
+		<HBox spacing="12" alignment="CENTER" style="-fx-padding: 10 0 20 0;">
+			<Button text="Add / Save Staff" onAction="#saveStaff" fx:id="saveButton" />
+			<Button text="Show Staffs" onAction="#showStaff" fx:id="showButton" />
+			<Button text="Exit" onAction="#handleExit" fx:id="exitButton" />
+		</HBox>
+	</bottom>
+
+</BorderPane>

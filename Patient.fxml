@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" alignment="TOP_CENTER" xmlns:fx="http://javafx.com/fxml/1">
+	<Label text="Patient" style="-fx-font-size: 30px; -fx-font-weight: bold;"
+		alignment="CENTER">
+		<VBox.margin>
+			<Insets bottom="5" top="30" />
+		</VBox.margin>
+	</Label>
+
+	<GridPane hgap="10" vgap="10" alignment="CENTER">
+		<Label text="ID:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+		<TextField fx:id="patientIdField" GridPane.rowIndex="0"
+			GridPane.columnIndex="1" promptText="e.g. P123" />
+
+		<Label text="Name:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+		<TextField fx:id="patientNameField" GridPane.rowIndex="1"
+			GridPane.columnIndex="1" />
+
+		<Label text="Disease:" GridPane.rowIndex="2"
+			GridPane.columnIndex="0" />
+		<TextField fx:id="diseaseField" GridPane.rowIndex="2"
+			GridPane.columnIndex="1" />
+
+		<Label text="Sex:" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+		<TextField fx:id="sexField" GridPane.rowIndex="3"
+			GridPane.columnIndex="1" promptText="M / F" />
+
+		<Label text="Admit Status:" GridPane.rowIndex="4"
+			GridPane.columnIndex="0" />
+		<ComboBox fx:id="admitStatusComboBox" GridPane.rowIndex="4"
+			GridPane.columnIndex="1" prefWidth="200" promptText="Select status" />
+
+
+		<Label text="Age:" GridPane.rowIndex="5" GridPane.columnIndex="0" />
+		<TextField fx:id="ageField" GridPane.rowIndex="5"
+			GridPane.columnIndex="1" />
+	</GridPane>
+
+	<HBox spacing="10" alignment="CENTER" style="-fx-padding: 10 0 20 0;">
+		<Button text="Add / Save Patient" onAction="#savePatient"
+			fx:id="saveButton" />
+		<Button text="Show Patients" onAction="#showPatient" fx:id="showButton" />
+		<Button fx:id="exitButton" text="Exit" onAction="#handleExit" />
+	</HBox>
+</VBox>

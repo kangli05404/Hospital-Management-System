@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+
+
+<VBox spacing="10" alignment="TOP_CENTER" xmlns:fx="http://javafx.com/fxml/1">
+	<Label text="Doctor" style="-fx-font-size: 30px; -fx-font-weight: bold;">
+		<VBox.margin>
+			<Insets bottom="5" top="30" />
+		</VBox.margin>
+	</Label>
+	<GridPane hgap="10" vgap="10" alignment="CENTER">
+		<Label text="ID:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+		<TextField fx:id="idField" GridPane.rowIndex="0"
+			GridPane.columnIndex="1" promptText="e.g. D123" />
+
+		<Label text="Name:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+		<TextField fx:id="nameField" GridPane.rowIndex="1"
+			GridPane.columnIndex="1" />
+
+		<Label text="Specialist:" GridPane.rowIndex="2"
+			GridPane.columnIndex="0" />
+		<ComboBox fx:id="specialistComboBox" GridPane.rowIndex="2"
+			GridPane.columnIndex="1" prefWidth="200" promptText="Select a specialty" />
+
+		<Label text="Work Time:" GridPane.rowIndex="3"
+			GridPane.columnIndex="0" />
+		<ComboBox fx:id="workTimeComboBox" GridPane.rowIndex="3"
+			GridPane.columnIndex="1" prefWidth="200" promptText="Select work time" />
+
+		<Label text="Qualification:" GridPane.rowIndex="4"
+			GridPane.columnIndex="0" />
+		<ComboBox fx:id="qualificationComboBox" GridPane.rowIndex="4"
+			GridPane.columnIndex="1" prefWidth="200" promptText="Select a qualification" />
+
+		<Label text="Room No:" GridPane.rowIndex="5"
+			GridPane.columnIndex="0" />
+		<TextField fx:id="roomField" GridPane.rowIndex="5"
+			GridPane.columnIndex="1" promptText="e.g. 123" />
+	</GridPane>
+
+	<HBox spacing="10" alignment="CENTER">
+		<Button text="Add / Save Doctor" onAction="#saveDoctor" fx:id="saveButton" />
+		<Button text="Show Doctors" onAction="#showDoctors" fx:id="showButton" />
+		<Button fx:id="exitButton" text="Exit" onAction="#handleExit" />
+	</HBox>
+</VBox>
