@@ -1,4 +1,6 @@
 # Hospital-Management-System
+A comprehensive JavaFX-based Hospital Management System built as part of a university coursework project. The application allows for the management of Doctors, Patients, Staff, Medicines, Facilities, and Laboratories within a hospital setting.
+
 This program is written entirely in Eclipse. Use this IDE, if possible, to ensure that the code run successfully.
 
 Before running our project, you need to do these few steps:
