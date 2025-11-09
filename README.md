@@ -3,7 +3,7 @@ A comprehensive JavaFX-based Hospital Management System built as part of a unive
 
 This program is written entirely in Eclipse. Use this IDE, if possible, to ensure that the code run successfully.
 
-Before running our project, you need to do these few steps:
+Before running the project, you need to do these few steps:
 
 1. Create a new Java Project.
 2. Create a package under the Java Project and named it as "HospitalManagementSystem".
